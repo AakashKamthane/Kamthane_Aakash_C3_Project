@@ -70,4 +70,13 @@ public class Restaurant {
         return name;
     }
 
+    public int calculateCostOfOrder(String ...selectedItems) throws itemNotFoundException {
+        int totalCost = 0;
+        for (int i = 0; i<selectedItems.length; i++ ){
+            totalCost = totalCost + findItemByName(selectedItems[i]).getPrice();
+        }
+        return totalCost;
+
+    }
+
 }
