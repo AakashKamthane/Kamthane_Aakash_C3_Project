@@ -38,6 +38,13 @@ class RestaurantTest {
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+     //<<<<<<<<<<<<<<<<<<<<<<<<<COST_OF_ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void total_cost_of_the_selected_items_from_the_menu_is_non_zero_and_equal_to_actual_cost() throws itemNotFoundException {
+        assertNotEquals(0,restaurant.calculateCostOfOrder("Sweet corn soup"));
+        assertEquals(119,restaurant.calculateCostOfOrder("Sweet corn soup"));
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<<<COST_OF_ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test
